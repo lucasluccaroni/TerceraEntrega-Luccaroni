@@ -107,7 +107,7 @@ const generarTarjetas = array => {
        return acc + `
        <div class="card" id="card-${element.id}">
            <h2> 
-           Producto: ${element.producto} 
+           ${element.producto} 
            </h2>
    
            <h3> 
@@ -123,10 +123,10 @@ const generarTarjetas = array => {
             </figure>
 
            <p> 
-           ${element.descripcion}
+           ${element.descripcion || "Descripción no disponible."}
            </p>
 
-           <button class="button-card" id= button-${element.id}">
+           <button class="button-card" id= button-${element.id}>
                 <i class="fa-solid fa-2xl fa-cart-shopping"></i>
            </button>
 
@@ -158,18 +158,22 @@ const eventoCards = (nodos, array) => {
 
         nodos[i].onclick = (e) =>{
             
-            const id = e.currentTarget.id.slice(7,8);
+            const id = e.currentTarget.id.slice(7);
 
             const buscarProducto = array.find(element => element.id === Number(id));
 
             carritoDeCompras.push(buscarProducto);
-            //console.log(carritoDeCompras);
 
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
+
+            Toastify({
+                text: `Se ha añadido a ${buscarProducto.producto} al carrito.`,
+                duration: 2000,
+                style: {
+                    background: "linear-gradient(to right, blue, aquamarine)",
+                  }
+            }).showToast();
         };
     };
 };
 eventoCards(allCards, productos)
-
-//Prueba Github
-//prueba 0007

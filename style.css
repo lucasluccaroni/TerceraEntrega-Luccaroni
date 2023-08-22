@@ -1,6 +1,15 @@
+body{
+    background-image: linear-gradient(rgb(88, 98, 236), rgb(89, 235, 210));
+    
+}
+
+header{
+    margin: 0;
+    padding: 10px;
+    border-bottom: 5px solid black;
+
+}
 #productos-container{
-    border: solid;
-    background-color: aliceblue;  
     flex-wrap: wrap;
     display: flex;
     justify-content: ce;
@@ -11,11 +20,12 @@
     width: 500px;
     height: 500px;
     background-color: aquamarine;
-    border: solid 2px red;
+    border: solid 2px black;
     text-align: center;
     padding: 20px;
     margin: 20px;
     justify-content: center;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 .container-img{
@@ -33,4 +43,13 @@
 .button-card{
     height: 40px;
     width: fit-content;
+}
+
+.titulo{
+    font-family: 'Hind Siliguri', sans-serif;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 5px;
+    
+    
 }
