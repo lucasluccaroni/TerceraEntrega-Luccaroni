@@ -172,3 +172,4 @@ const eventoCards = (nodos, array) => {
 eventoCards(allCards, productos)
 
 //Prueba Github
+//prueba 0007
