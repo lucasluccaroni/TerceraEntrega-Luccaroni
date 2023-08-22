@@ -1,0 +1,36 @@
+#productos-container{
+    border: solid;
+    background-color: aliceblue;  
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: ce;
+
+}
+
+.card{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    border: solid 2px red;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    justify-content: center;
+}
+
+.container-img{
+    height: 20px;
+    width: 20px;
+}
+
+.imagenes{
+    border: solid black;
+    width: 150px;
+    height: 150px;
+}
+
+
+.button-card{
+    height: 40px;
+    width: fit-content;
+}
